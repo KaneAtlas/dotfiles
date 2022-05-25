@@ -3,6 +3,8 @@
 
 #slack
 sudo snap install slack --classic
+#vscode 
+sudo snap install --classic code
 #chrome
 source get_chrome.sh
 #vimplug
