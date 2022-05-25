@@ -9,6 +9,8 @@ set -x PATH $PATH:$HOME/Documents/personal/flutter/bin
 set -x PATH $PATH:$HOME/.pub-cache/bin
 
 # pyenv init
+set -x PYENV_ROOT $HOME/.pyenv
+set -x PATH $PYENV_ROOT/bin:$PATH
 status is-login; and pyenv init --path | source
 set -gx PATH '/home/snow/.pyenv/shims' $PATH
 status is-interactive; and pyenv init - | source

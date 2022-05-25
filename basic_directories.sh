@@ -23,4 +23,5 @@ make_dirs personal/other
 
 make_dirs other/blender
 
-
+#back to dotfiles
+cd ~/Documents/personal/dotfiles

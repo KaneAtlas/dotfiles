@@ -2,7 +2,7 @@
 #installs all basic apt dependencies
 
 #terminal stuff
-sudo apt install vim neovim kitty fish snap
+sudo apt install vim neovim kitty fish snap curl fortune
 #git
 sudo apt install git-all
 #pyenv dependencies
