@@ -1,0 +1,63 @@
+# custom aliases
+# useful commands
+alias kbg="kill -9 `jobs -ps`"
+#lxc
+alias startc="lxc-start localc"
+alias localc="lxc-attach localc"
+#flutter
+alias studio="./~/Documents/stuffs/android-studio/bin/studio.sh"
+#git
+alias gitconf="git config -l"
+alias mygit="git config --local user.name KaneAtlas;git config --local user.email kisbyalexander@gmail.com"
+alias master="git checkout master;git pull origin master"
+alias add="git add ."
+alias p="git pull"
+alias s="git status"
+#general
+alias chrome="google-chrome &" 
+#kitty
+alias kconf="nvim ~/.config/kitty/kitty.conf"
+alias al="nvim ~/.aliases"
+alias ll='ls -alF'
+alias la='ls -A'
+alias l='ls -CF'
+alias ..="cd .."
+alias ...="cd ../.."
+#nvim stuff
+alias init.vim="nvim ~/.config/nvim/init.vim"
+#bash stuff
+alias brc="nvim ~/.bashrc"
+alias bcm="nvim ~/.bash_custom"
+alias sb="source ~/.bashrc"
+# fish stuff
+alias frc="nvim ~/.config/fish/config.fish"
+alias sf="source ~/.config/fish/config.fish"
+# other configs
+alias sshconfig="nvim ~/.ssh/config"
+#work
+alias poetryconf="poetry config http-basic.mustard poetry_check vyNmB22xELij5mzz9mQy"
+alias dep="pyenv activate devutil; set -x PYTHONPATH $PYTHONPATH:$HOME/Documents/git/devutil"
+alias horses="cd $HOME/Documents/git/horse_racing_scrapers; pyenv activate horse_scrapers"
+alias dogs="cd $HOME/Documents/git/horse_racing_scrapers; pyenv activate doggies"
+alias gate="ssh ssh-hex.mustardsystems.com -p 2221 -D 8080 -i ~/.ssh/mustard_remote_access"
+alias mustardpip="pip install inc-utils==2.3.0 --index-url https://alexk:vyNmB22xELij5mzz9mQy@gitlab.mustard/api/v4/projects/543/packages/pypi/simple --extra-index-url https://pypi.org/simple --proxy socks5h://localhost:8080 --trusted-host gitlab.mustard"
+function mpip
+    command pip install $argv --index-url https://alexk:m1V9jWL4gpCcVs6pRma3@gitlab.mustard/api/v4/projects/543/packages/pypi/simple --extra-index-url https://pypi.org/simple --proxy socks5h://localhost:8080 --trusted-host gitlab.mustard
+end
+function rp
+    command eval (pyenv which python) $argv --options data_local/localrp.conf
+end
+function bha
+    command python $argv --options data_local/localbha.conf
+end
+# setup
+function start 
+        command eval cd $HOME/Documents/git
+	command code .                                
+        command google-chrome &                
+        command slack          
+        command kitty &  
+        command ssh ssh-hex.mustardsystems.com -p 2221 -D 8080 -i ~/.ssh/mustard_remote_access
+end
+
+# PATH stuff

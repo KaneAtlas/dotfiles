@@ -1,0 +1,34 @@
+ServerAliveInterval 30
+ControlMaster auto
+ControlPath   ~/.ssh/ctrlpath-%h_%p_%r_%u
+ControlPersist 25
+
+Host localc
+	HostName 10.0.3.80
+	port 5432
+
+Host ssh-hex.mustardsystems.com ssh-hex
+        PreferredAuthentications publickey
+        User alexk
+        Port 2221
+	ForwardX11 no
+	ForwardX11Trusted no
+        ForwardAgent yes
+        DynamicForward 127.0.0.1:1080
+	LocalForward 5673 rmq.odin-test.mustard:5672
+	LocalForward 5674 rmq.atlantis-test.mustard:5672
+
+Host ssh-colet.mustardsystems.com ssh-colet
+        PreferredAuthentications publickey
+        User alexk
+        Port 2221
+	ForwardX11 no
+	ForwardX11Trusted no
+        ForwardAgent yes
+        DynamicForward 127.0.0.1:1080
+
+Host *.linux.mustardsystems.com *.mustard 10.*
+        PreferredAuthentications publickey
+        User alexk
+        ForwardAgent yes
+        ProxyCommand ssh -W %h:%p alexk@ssh-colet.mustardsystems.com
