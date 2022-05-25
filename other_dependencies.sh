@@ -3,6 +3,8 @@
 
 #slack
 sudo snap install slack --classic
+#chrome
+source get_chrome.sh
 #vimplug
 curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
