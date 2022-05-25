@@ -11,4 +11,4 @@ curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
 #install pyenv (dependencies already installed)
 git clone https://github.com/pyenv/pyenv.git ~/.pyenv
 pyenv install 3.8.12
-
+git clone https://github.com/pyenv/pyenv-virtualenv.git $(pyenv root)/plugins/pyenv-virtualenv
